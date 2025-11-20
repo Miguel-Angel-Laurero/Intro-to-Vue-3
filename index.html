@@ -10,6 +10,7 @@
   </head>
   <body>
     <div id="app">
+      <div class="cart">Cart({{ cart }})</div>
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
@@ -35,6 +36,8 @@
             <div v-for="variant in variants" :key="variant-id">{{variant.color}}</div>
             <h2>Sizes</h2>
             <div v-for="size in sizes">{{size}}</div>
+            <!--v-on:click -> evento que escuchamos , cart += 1 -> expression que activa el evento -->
+            <button class="button" v-on:click="addToCart">Add to Cart</button>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data(){
         return{
+            cart:0,
             product: 'socks',
             description: 'This is a pair of blue socks',
             image: './assets/images/socks_blue.jpg',
@@ -14,6 +15,12 @@ const app = Vue.createApp({
                 {id:2235,color:'blue'},
             ],
             sizes:['small','medium','large'],
+   
+        }
+    },
+    methods: {
+        addToCart(){
+            this.cart += 1
         }
     }
 })
